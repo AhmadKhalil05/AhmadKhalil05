@@ -3,7 +3,6 @@ from PIL import Image, ImageOps, ImageEnhance, ImageFilter
 import html
 import json
 import numpy as np
-import os
 
 ROOT = Path(__file__).resolve().parents[1]
 CFG_PATH = ROOT / "profile-config.json"
@@ -15,91 +14,78 @@ if not PHOTO_PATH.exists():
 
 OUT_PATH = ROOT / "assets" / "profile-hero.svg"
 
-def generate_ascii_lines(image_path, target_cols=76):
+def generate_ascii_lines(image_path, target_cols=70):
     """
-    Renders a high-readability terminal ASCII portrait.
-    Compensates for character aspect ratio, isolates subject silhouette,
-    preserves sunglasses contrast, and illuminates facial features accurately.
+    Renders a true-to-life terminal ASCII portrait of Ahmad.
+    Preserves sunglasses, hair, facial highlights, beard, and jawline with calibrated contrast.
     """
     img = Image.open(image_path).convert("L")
     w, h = img.size
 
-    # Crop tightly around head and upper chest/hoodie
-    crop_x1 = int(w * 0.11)
+    # Crop tightly around head and upper torso
+    crop_x1 = int(w * 0.16)
     crop_y1 = int(h * 0.03)
-    crop_x2 = int(w * 0.89)
-    crop_y2 = int(h * 0.97)
-    
-    cropped = np.array(img.crop((crop_x1, crop_y1, crop_x2, crop_y2))).astype(float)
-    ch, cw = cropped.shape
+    crop_x2 = int(w * 0.86)
+    crop_y2 = int(h * 0.95)
+    cropped = img.crop((crop_x1, crop_y1, crop_x2, crop_y2))
+    cw, ch = cropped.size
 
-    # Coordinates relative to crop:
-    cY, cX = np.ogrid[:ch, :cw]
-    cx = (w * 0.50) - crop_x1
-    cy_head = (h * 0.29) - crop_y1
-    cy_body = (h * 0.72) - crop_y1
+    # Contrast and edge sharpening
+    enh = ImageOps.autocontrast(cropped, cutoff=2)
+    enh = ImageEnhance.Contrast(enh).enhance(1.65)
+    enh = enh.filter(ImageFilter.UnsharpMask(radius=2.0, percent=220, threshold=1))
 
-    # Subject masks (Head ellipse + Body contour)
-    dist_head = ((cX - cx) / (cw * 0.32)) ** 2 + ((cY - cy_head) / (ch * 0.30)) ** 2
-    dist_body = ((cX - cx) / (cw * 0.48)) ** 2 + ((cY - cy_body) / (ch * 0.38)) ** 2
-    subject_mask = (dist_head <= 1.0) | (dist_body <= 1.0)
-
-    # Feature enhancement
-    pil_crop = Image.fromarray(cropped.astype(np.uint8))
-    enhanced = ImageEnhance.Contrast(pil_crop).enhance(1.45)
-    enhanced = enhanced.filter(ImageFilter.UnsharpMask(radius=2.2, percent=220, threshold=1))
-    arr_enh = np.array(enhanced).astype(float)
-
-    # Multi-zone tonal mapping:
-    # 1. Background outside subject: 0 (clean empty spaces)
-    # 2. Subject body/hoodie & hair: base tone ~32-45 (gives . : glyphs)
-    # 3. Face region:
-    #    - Skin highlights scaled from 40..255 (gives + * # % @)
-    #    - Sunglasses remain dark (~15-35) for crisp contrast
-    #    - Beard and features properly delineated
-    mapped = np.zeros_like(cropped)
-    
-    # Base silhouette tone
-    mapped[subject_mask] = 30 + arr_enh[subject_mask] * 0.38
-
-    # Face highlights
-    head_mask = dist_head <= 1.02
-    skin_mask = head_mask & (arr_enh > 38)
-    mapped[skin_mask] = 40 + np.power((arr_enh[skin_mask] - 38) / 195.0, 0.82) * 215.0
-    mapped = np.clip(mapped, 0, 255)
-
-    # Character aspect ratio in monospace fonts (width / height ~ 0.52)
     char_ratio = 0.52
     target_rows = int(target_cols * (ch / cw) * char_ratio)
 
-    res = Image.fromarray(mapped.astype(np.uint8)).resize((target_cols, target_rows), Image.Resampling.LANCZOS)
+    res = enh.resize((target_cols, target_rows), Image.Resampling.LANCZOS)
     px = np.array(res)
+
+    # Clean silhouette mask isolating Ahmad from background
+    mask = np.zeros((target_rows, target_cols), dtype=bool)
+    for y in range(target_rows):
+        if y < 4:
+            mask[y, 22:38] = True
+        elif y < 8:
+            mask[y, 16:44] = True
+        elif y < 14:
+            mask[y, 13:48] = True
+        elif y < 20:
+            mask[y, 10:52] = True
+        elif y < 26:
+            mask[y, 8:56] = True
+        else:
+            mask[y, 4:64] = True
 
     ramp = " .:-=+*#%@"
     lines = []
     for y in range(target_rows):
         line = []
         for x in range(target_cols):
-            v = px[y, x]
-            if v < 18:
+            if not mask[y, x]:
                 line.append(" ")
             else:
+                v = px[y, x]
                 idx = int((v / 255) * (len(ramp) - 1))
                 line.append(ramp[idx])
         lines.append("".join(line).rstrip())
 
-    return lines, target_cols, target_rows
+    # Trim trailing empty lines
+    while lines and not lines[-1].strip():
+        lines.pop()
+
+    return lines, target_cols, len(lines)
 
 def build_hero_svg():
-    lines, cols, rows = generate_ascii_lines(PHOTO_PATH, target_cols=75)
+    lines, cols, rows = generate_ascii_lines(PHOTO_PATH, target_cols=70)
     
     SVG_W = 1200
     SVG_H = 480
     
-    cell_w = 5.2
-    cell_h = 8.6
+    cell_w = 5.6
+    cell_h = 9.2
     ascii_start_x = 42
-    ascii_start_y = 78
+    ascii_start_y = 74
 
     display_name = CFG.get("display_name", "Ahmad Khalil")
     role = CFG.get("role", "Designer & Software Engineer")
@@ -121,7 +107,7 @@ def build_hero_svg():
     .term-path { fill: #8b949e; font-size: 14px; }
     .term-cmd { fill: #f0f6fc; font-weight: 600; font-size: 14px; }
     .term-dim { fill: #8b949e; font-size: 12px; }
-    .ascii-text { fill: #c9d1d9; font-size: 7.4px; white-space: pre; }
+    .ascii-text { fill: #c9d1d9; font-size: 7.8px; white-space: pre; font-weight: 500; }
     .name-title { fill: #f0f6fc; font-size: 30px; font-weight: 700; }
     .role-title { fill: #7ee787; font-size: 16px; font-weight: 600; }
     .meta-label { fill: #8b949e; font-size: 14px; font-weight: 600; }
