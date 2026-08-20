@@ -11,49 +11,69 @@ CFG = json.loads(CFG_PATH.read_text(encoding="utf-8")) if CFG_PATH.exists() else
 
 PHOTO_PATH = ROOT / "source" / "profile-photo.png"
 if not PHOTO_PATH.exists():
-    PHOTO_PATH = ROOT / "source-photo.png"
+    PHOTO_PATH = ROOT / "image.png"
 
 OUT_PATH = ROOT / "assets" / "profile-hero.svg"
 
 def generate_ascii_lines(image_path, target_cols=76):
     """
     Renders a high-readability terminal ASCII portrait.
-    Compensates for character aspect ratio, isolates subject, and uses luminance ramp.
+    Compensates for character aspect ratio, isolates subject silhouette,
+    preserves sunglasses contrast, and illuminates facial features accurately.
     """
     img = Image.open(image_path).convert("L")
     w, h = img.size
 
-    # Crop tightly around face & upper torso if full avatar
-    if w >= 200 and h >= 200:
-        crop_box = (int(w * 0.16), int(h * 0.04), int(w * 0.84), int(h * 0.94))
-        img = img.crop(crop_box)
-        w, h = img.size
+    # Crop tightly around head and upper chest/hoodie
+    crop_x1 = int(w * 0.11)
+    crop_y1 = int(h * 0.03)
+    crop_x2 = int(w * 0.89)
+    crop_y2 = int(h * 0.97)
+    
+    cropped = np.array(img.crop((crop_x1, crop_y1, crop_x2, crop_y2))).astype(float)
+    ch, cw = cropped.shape
 
-    arr = np.array(img).astype(float)
+    # Coordinates relative to crop:
+    cY, cX = np.ogrid[:ch, :cw]
+    cx = (w * 0.50) - crop_x1
+    cy_head = (h * 0.29) - crop_y1
+    cy_body = (h * 0.72) - crop_y1
 
-    # Subject isolation mask (face and upper body)
-    Y, X = np.ogrid[:h, :w]
-    cx = w * 0.48
-    cy_face = h * 0.36
-    cy_body = h * 0.72
-    dist_face = ((X - cx) / (w * 0.38)) ** 2 + ((Y - cy_face) / (h * 0.36)) ** 2
-    dist_body = ((X - cx) / (w * 0.48)) ** 2 + ((Y - cy_body) / (h * 0.48)) ** 2
-    mask = np.clip(1.35 - np.minimum(dist_face, dist_body), 0, 1)
+    # Subject masks (Head ellipse + Body contour)
+    dist_head = ((cX - cx) / (cw * 0.32)) ** 2 + ((cY - cy_head) / (ch * 0.30)) ** 2
+    dist_body = ((cX - cx) / (cw * 0.48)) ** 2 + ((cY - cy_body) / (ch * 0.38)) ** 2
+    subject_mask = (dist_head <= 1.0) | (dist_body <= 1.0)
 
-    arr_subject = arr * mask
-    img_sub = Image.fromarray(arr_subject.astype(np.uint8))
+    # Feature enhancement
+    pil_crop = Image.fromarray(cropped.astype(np.uint8))
+    enhanced = ImageEnhance.Contrast(pil_crop).enhance(1.45)
+    enhanced = enhanced.filter(ImageFilter.UnsharpMask(radius=2.2, percent=220, threshold=1))
+    arr_enh = np.array(enhanced).astype(float)
 
-    # Contrast & feature enhancement
-    img_enhanced = ImageOps.autocontrast(img_sub, cutoff=1)
-    img_enhanced = ImageEnhance.Contrast(img_enhanced).enhance(1.65)
-    img_enhanced = img_enhanced.filter(ImageFilter.UnsharpMask(radius=1.6, percent=160, threshold=2))
+    # Multi-zone tonal mapping:
+    # 1. Background outside subject: 0 (clean empty spaces)
+    # 2. Subject body/hoodie & hair: base tone ~32-45 (gives . : glyphs)
+    # 3. Face region:
+    #    - Skin highlights scaled from 40..255 (gives + * # % @)
+    #    - Sunglasses remain dark (~15-35) for crisp contrast
+    #    - Beard and features properly delineated
+    mapped = np.zeros_like(cropped)
+    
+    # Base silhouette tone
+    mapped[subject_mask] = 30 + arr_enh[subject_mask] * 0.38
+
+    # Face highlights
+    head_mask = dist_head <= 1.02
+    skin_mask = head_mask & (arr_enh > 38)
+    mapped[skin_mask] = 40 + np.power((arr_enh[skin_mask] - 38) / 195.0, 0.82) * 215.0
+    mapped = np.clip(mapped, 0, 255)
 
     # Character aspect ratio in monospace fonts (width / height ~ 0.52)
     char_ratio = 0.52
-    target_rows = int(target_cols * (h / w) * char_ratio)
+    target_rows = int(target_cols * (ch / cw) * char_ratio)
 
-    resized = img_enhanced.resize((target_cols, target_rows), Image.Resampling.LANCZOS)
-    px = np.array(resized)
+    res = Image.fromarray(mapped.astype(np.uint8)).resize((target_cols, target_rows), Image.Resampling.LANCZOS)
+    px = np.array(res)
 
     ramp = " .:-=+*#%@"
     lines = []
@@ -61,7 +81,7 @@ def generate_ascii_lines(image_path, target_cols=76):
         line = []
         for x in range(target_cols):
             v = px[y, x]
-            if v < 22:
+            if v < 18:
                 line.append(" ")
             else:
                 idx = int((v / 255) * (len(ramp) - 1))
@@ -71,13 +91,11 @@ def generate_ascii_lines(image_path, target_cols=76):
     return lines, target_cols, target_rows
 
 def build_hero_svg():
-    lines, cols, rows = generate_ascii_lines(PHOTO_PATH, target_cols=74)
+    lines, cols, rows = generate_ascii_lines(PHOTO_PATH, target_cols=75)
     
     SVG_W = 1200
     SVG_H = 480
     
-    # ASCII Placement parameters
-    ascii_font_size = 7.4
     cell_w = 5.2
     cell_h = 8.6
     ascii_start_x = 42
