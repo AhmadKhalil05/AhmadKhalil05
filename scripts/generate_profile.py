@@ -15,7 +15,7 @@ def build_hero_svg():
     role = CFG.get("role", "Designer & Software Engineer")
     focus = CFG.get("focus", "Full-Stack · DevOps · QA")
     stack = CFG.get("stack", "React · TypeScript · Supabase · AWS · Cloudflare")
-    builds = CFG.get("builds", "Serverless · Playwright E2E · Distributed Systems")
+    builds = CFG.get("builds", "Full-Stack Apps · Playwright E2E · Serverless")
     location = CFG.get("location", "Palestine")
     website = CFG.get("website", "ahmadkh.co")
 
@@ -88,11 +88,11 @@ def build_hero_svg():
     svg.append('      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.40s" fill="freeze"/>')
     svg.append('    </g>')
     
-    # Bio lines
+    # Bio lines (updated to Full-Stack Applications)
     bio_lines = [
-        "Crafting scalable cloud architectures,",
+        "Building robust full-stack applications,",
         "automated testing pipelines, and",
-        "high-performance web interfaces."
+        "refined, high-performance web experiences."
     ]
     for idx, bline in enumerate(bio_lines):
         by = 202 + idx * 24
