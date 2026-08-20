@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="490" height="350" viewBox="0 0 490 350">
+<rect width="100%" height="100%" rx="14" fill="#0d1117"/>
+<rect x="1" y="1" width="488" height="348" rx="13" fill="none" stroke="#30363d"/>
+<g font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">
+<text x="24" y="36" font-size="17" font-weight="700" fill="#f0f6fc">Ahmad Khalil</text>
+<text x="24" y="56" font-size="11" fill="#8b949e">ahmad@github</text>
+<line x1="24" y1="72" x2="466" y2="72" stroke="#21262d"/>
+<g opacity="0" transform="translate(0 5)">
+<text x="24" y="105" font-size="12" font-weight="700" fill="#7ee787">Role    </text>
+<text x="105" y="105" font-size="12" fill="#c9d1d9">Designer &amp; Software Engineer</text>
+<animate attributeName="opacity" from="0" to="1" dur="0.30s" begin="0.30s" fill="freeze"/>
+<animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" dur="0.30s" begin="0.30s" fill="freeze"/>
+</g>
+<g opacity="0" transform="translate(0 5)">
+<text x="24" y="141" font-size="12" font-weight="700" fill="#7ee787">Focus   </text>
+<text x="105" y="141" font-size="12" fill="#c9d1d9">Full-Stack · Cloud · QA</text>
+<animate attributeName="opacity" from="0" to="1" dur="0.30s" begin="0.42s" fill="freeze"/>
+<animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" dur="0.30s" begin="0.42s" fill="freeze"/>
+</g>
+<g opacity="0" transform="translate(0 5)">
+<text x="24" y="177" font-size="12" font-weight="700" fill="#7ee787">Stack   </text>
+<text x="105" y="177" font-size="12" fill="#c9d1d9">TypeScript · React · AWS</text>
+<animate attributeName="opacity" from="0" to="1" dur="0.30s" begin="0.54s" fill="freeze"/>
+<animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" dur="0.30s" begin="0.54s" fill="freeze"/>
+</g>
+<g opacity="0" transform="translate(0 5)">
+<text x="24" y="213" font-size="12" font-weight="700" fill="#7ee787">Builds  </text>
+<text x="105" y="213" font-size="12" fill="#c9d1d9">Serverless · E2E · 3D Web</text>
+<animate attributeName="opacity" from="0" to="1" dur="0.30s" begin="0.66s" fill="freeze"/>
+<animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" dur="0.30s" begin="0.66s" fill="freeze"/>
+</g>
+<g opacity="0" transform="translate(0 5)">
+<text x="24" y="249" font-size="12" font-weight="700" fill="#7ee787">Based   </text>
+<text x="105" y="249" font-size="12" fill="#c9d1d9">Palestine</text>
+<animate attributeName="opacity" from="0" to="1" dur="0.30s" begin="0.78s" fill="freeze"/>
+<animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" dur="0.30s" begin="0.78s" fill="freeze"/>
+</g>
+<g opacity="0" transform="translate(0 5)">
+<text x="24" y="285" font-size="12" font-weight="700" fill="#7ee787">Web     </text>
+<text x="105" y="285" font-size="12" fill="#c9d1d9">ahmadkh.framer.ai</text>
+<animate attributeName="opacity" from="0" to="1" dur="0.30s" begin="0.90s" fill="freeze"/>
+<animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" dur="0.30s" begin="0.90s" fill="freeze"/>
+</g>
+<line x1="24" y1="314" x2="466" y2="314" stroke="#21262d"/>
+<text x="24" y="334" font-size="10" fill="#8b949e">TypeScript · React · AWS · Playwright · Design</text>
+</g>
+</svg>
