@@ -1,16 +1,24 @@
-## Hi there 👋
+<div align="center">
 
-<!--
-**AhmadKhalil05/AhmadKhalil05** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+### `ahmad@github ~ $ ./contributions.sh`
 
-Here are some ideas to get you started:
+<img src="./contrib-heatmap.svg" width="860" alt="Ahmad Khalil GitHub contribution heatmap" />
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<br>
+
+### `ahmad@github ~ $ whoami`
+
+<table>
+  <tr>
+    <td valign="top"><img src="./ahmad-ascii.svg" width="370" alt="Animated ASCII portrait of Ahmad Khalil" /></td>
+    <td valign="top"><img src="./info-card.svg" width="490" alt="Ahmad Khalil terminal profile card" /></td>
+  </tr>
+</table>
+
+<br>
+
+### `ahmad@github ~ $ open links`
+
+[Portfolio](https://ahmadkh.framer.ai/) · [LinkedIn](https://www.linkedin.com/in/ahmad-khalil05/) · [Behance](https://www.behance.net/AhmadKhalil0)
+
+</div>
