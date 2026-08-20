@@ -1,44 +1,48 @@
-# AhmadKhalil05 profile README — setup
+# AhmadKhalil05 — Terminal Profile README
 
-## Fastest install
+A minimal, dark-mode native, terminal-inspired GitHub Profile with animated ASCII portrait, developer metadata, and dynamic contribution activity.
 
-If the repo already exists locally:
+## Architecture
+
+```
+.github/
+  workflows/
+    update-profile.yml       # Daily automatic contribution & asset update
+assets/
+  profile-hero.svg           # Unified hero (ASCII portrait + profile metadata)
+  contributions.svg          # Full-width interactive contribution heatmap
+data/
+  contributions.json         # Raw GitHub contribution history
+scripts/
+  fetch_contributions.py     # Pulls contribution stats from GitHub
+  generate_profile.py        # Generates assets/profile-hero.svg
+  generate_contributions.py  # Generates assets/contributions.svg
+  prep_photo.py              # Photo preprocessing helper
+source/
+  profile-photo.png          # High-resolution source photo
+profile-config.json          # Profile configuration & links
+requirements.txt             # Python dependencies
+README.md                    # Profile README
+```
+
+## Local Development & Regeneration
 
 ```bash
-cp -R . /path/to/AhmadKhalil05/
-cd /path/to/AhmadKhalil05
-python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\\Scripts\\activate
-pip install -r scripts/requirements.txt
-python scripts/prep_photo.py
-python scripts/make_ascii_svg.py
-python scripts/make_info_card.py
+# 1. Install dependencies
+pip install -r requirements.txt
+
+# 2. Fetch latest contributions & generate SVGs
+python scripts/fetch_contributions.py
+python scripts/generate_contributions.py
+python scripts/generate_profile.py
+
+# 3. Commit & push
 git add .
-git commit -m "feat: animated terminal profile"
+git commit -m "feat: update profile"
 git push origin main
 ```
 
-The GitHub Action runs on the push, fetches the real contribution calendar, generates `contrib-heatmap.svg`, and commits the refreshed output.
+## Customization
 
-## Change the portrait
-
-Replace `source-photo.png` with a clear portrait, then run:
-
-```bash
-python scripts/prep_photo.py
-python scripts/make_ascii_svg.py
-```
-
-Commit `source-photo.png`, `source-prepped.png`, and `ahmad-ascii.svg`.
-
-## Change profile text
-
-Edit `profile-config.json`, then run:
-
-```bash
-python scripts/make_info_card.py
-```
-
-## Manual refresh
-
-Open GitHub → Actions → **Update profile art** → **Run workflow**.
+- **Profile Details**: Edit `profile-config.json` and run `python scripts/generate_profile.py`.
+- **Change Photo**: Replace `source/profile-photo.png` and run `python scripts/generate_profile.py`.

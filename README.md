@@ -1,24 +1,16 @@
-<div align="center">
+<p align="center">
+  <img src="./assets/profile-hero.svg" width="100%" alt="Ahmad Khalil terminal profile" />
+</p>
 
-### `ahmad@github ~ $ ./contributions.sh`
-
-<img src="./contrib-heatmap.svg" width="860" alt="Ahmad Khalil GitHub contribution heatmap" />
-
-<br>
-
-### `ahmad@github ~ $ whoami`
-
-<table>
-  <tr>
-    <td valign="top"><img src="./ahmad-ascii.svg" width="370" alt="Animated ASCII portrait of Ahmad Khalil" /></td>
-    <td valign="top"><img src="./info-card.svg" width="490" alt="Ahmad Khalil terminal profile card" /></td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://ahmadkh.framer.ai/"><b>Website</b></a> &nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="https://github.com/AhmadKhalil05"><b>GitHub</b></a> &nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="https://www.linkedin.com/in/ahmad-khalil05/"><b>LinkedIn</b></a> &nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="https://www.behance.net/AhmadKhalil0"><b>Behance</b></a>
+</p>
 
 <br>
 
-### `ahmad@github ~ $ open links`
-
-[Portfolio](https://ahmadkh.framer.ai/) · [LinkedIn](https://www.linkedin.com/in/ahmad-khalil05/) · [Behance](https://www.behance.net/AhmadKhalil0)
-
-</div>
+<p align="center">
+  <img src="./assets/contributions.svg" width="100%" alt="GitHub contribution activity" />
+</p>
