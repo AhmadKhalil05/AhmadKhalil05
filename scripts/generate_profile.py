@@ -16,61 +16,68 @@ OUT_PATH = ROOT / "assets" / "profile-hero.svg"
 
 def generate_ascii_lines(image_path, target_cols=70):
     """
-    Renders a true-to-life terminal ASCII portrait of Ahmad.
-    Preserves sunglasses, hair, facial highlights, beard, and jawline with calibrated contrast.
+    Renders a true-to-life, crisp terminal ASCII portrait of Ahmad from the high-resolution source photo.
+    Preserves all facial features, hair, eyes, nose, beard, jawline, and silhouette.
     """
     img = Image.open(image_path).convert("L")
     w, h = img.size
 
-    # Crop tightly around head and upper torso
-    crop_x1 = int(w * 0.16)
-    crop_y1 = int(h * 0.03)
-    crop_x2 = int(w * 0.86)
-    crop_y2 = int(h * 0.95)
+    # Crop tightly around head, shoulders, and chest
+    crop_x1 = int(w * 0.13)
+    crop_y1 = int(h * 0.05)
+    crop_x2 = int(w * 0.87)
+    crop_y2 = int(h * 0.83)
     cropped = img.crop((crop_x1, crop_y1, crop_x2, crop_y2))
     cw, ch = cropped.size
 
     # Contrast and edge sharpening
-    enh = ImageOps.autocontrast(cropped, cutoff=2)
-    enh = ImageEnhance.Contrast(enh).enhance(1.65)
+    enh = ImageOps.autocontrast(cropped, cutoff=1.5)
+    enh = ImageEnhance.Contrast(enh).enhance(1.6)
     enh = enh.filter(ImageFilter.UnsharpMask(radius=2.0, percent=220, threshold=1))
+    arr = np.array(enh).astype(float)
+
+    # Subject silhouette mask
+    cY, cX = np.ogrid[:ch, :cw]
+    cx = cw * 0.49
+    cy_head = ch * 0.35
+    cy_body = ch * 0.75
+
+    dist_head = ((cX - cx) / (cw * 0.36)) ** 2 + ((cY - cy_head) / (ch * 0.34)) ** 2
+    dist_body = ((cX - cx) / (cw * 0.49)) ** 2 + ((cY - cy_body) / (ch * 0.42)) ** 2
+    subject_mask = (dist_head <= 1.0) | (dist_body <= 1.0)
+
+    # Feature edges
+    edges = enh.filter(ImageFilter.FIND_EDGES)
+    arr_e = np.array(edges).astype(float)
+    arr_e_enh = np.power(arr_e / 255.0, 0.7) * 255.0
+
+    # Composite mapped intensity
+    mapped = np.zeros_like(arr)
+    mapped[subject_mask] = 20 + arr[subject_mask] * 0.85 + arr_e_enh[subject_mask] * 0.35
+    mapped = np.clip(mapped, 0, 255)
 
     char_ratio = 0.52
     target_rows = int(target_cols * (ch / cw) * char_ratio)
 
-    res = enh.resize((target_cols, target_rows), Image.Resampling.LANCZOS)
+    res = Image.fromarray(mapped.astype(np.uint8)).resize((target_cols, target_rows), Image.Resampling.LANCZOS)
     px = np.array(res)
-
-    # Clean silhouette mask isolating Ahmad from background
-    mask = np.zeros((target_rows, target_cols), dtype=bool)
-    for y in range(target_rows):
-        if y < 4:
-            mask[y, 22:38] = True
-        elif y < 8:
-            mask[y, 16:44] = True
-        elif y < 14:
-            mask[y, 13:48] = True
-        elif y < 20:
-            mask[y, 10:52] = True
-        elif y < 26:
-            mask[y, 8:56] = True
-        else:
-            mask[y, 4:64] = True
 
     ramp = " .:-=+*#%@"
     lines = []
     for y in range(target_rows):
         line = []
         for x in range(target_cols):
-            if not mask[y, x]:
+            v = px[y, x]
+            if v < 18:
                 line.append(" ")
             else:
-                v = px[y, x]
                 idx = int((v / 255) * (len(ramp) - 1))
                 line.append(ramp[idx])
         lines.append("".join(line).rstrip())
 
-    # Trim trailing empty lines
+    # Trim leading and trailing empty lines
+    while lines and not lines[0].strip():
+        lines.pop(0)
     while lines and not lines[-1].strip():
         lines.pop()
 
@@ -85,7 +92,7 @@ def build_hero_svg():
     cell_w = 5.6
     cell_h = 9.2
     ascii_start_x = 42
-    ascii_start_y = 74
+    ascii_start_y = 70
 
     display_name = CFG.get("display_name", "Ahmad Khalil")
     role = CFG.get("role", "Designer & Software Engineer")

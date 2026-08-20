@@ -31,138 +31,182 @@
   <line x1="1" y1="52" x2="1199" y2="52" stroke="#21262d" stroke-width="1"/>
   <!-- Animated ASCII Portrait -->
   <g class="mono ascii-text" xml:space="preserve">
-    <defs><clipPath id="ln0"><rect x="42" y="75.0" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="222.8" dur="0.38s" begin="0.15s" fill="freeze"/>
+    <defs><clipPath id="ln0"><rect x="42" y="71.0" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="234.0" dur="0.40s" begin="0.15s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="83.2" clip-path="url(#ln0)">                      ==++++++++++++++</text>
-    <defs><clipPath id="ln1"><rect x="42" y="84.2" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="222.8" dur="0.38s" begin="0.18s" fill="freeze"/>
+    <text x="42" y="79.2" clip-path="url(#ln0)">                            .:--=-:-=-:.</text>
+    <defs><clipPath id="ln1"><rect x="42" y="80.2" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="262.0" dur="0.45s" begin="0.18s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="92.4" clip-path="url(#ln1)">                      ++++++++********</text>
-    <defs><clipPath id="ln2"><rect x="42" y="93.4" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="222.8" dur="0.38s" begin="0.22s" fill="freeze"/>
+    <text x="42" y="88.4" clip-path="url(#ln1)">                           ::-=+#%#**#%%%#+=:</text>
+    <defs><clipPath id="ln2"><rect x="42" y="89.4" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="278.8" dur="0.48s" begin="0.22s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="101.6" clip-path="url(#ln2)">                      +++**++=-==---==</text>
-    <defs><clipPath id="ln3"><rect x="42" y="102.6" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="161.2" dur="0.27s" begin="0.26s" fill="freeze"/>
+    <text x="42" y="97.6" clip-path="url(#ln2)">                        .        :=**++=++**+=:.</text>
+    <defs><clipPath id="ln3"><rect x="42" y="98.6" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="290.0" dur="0.50s" begin="0.26s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="110.8" clip-path="url(#ln3)">                      *++-.</text>
-    <defs><clipPath id="ln4"><rect x="42" y="111.8" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="256.4" dur="0.44s" begin="0.29s" fill="freeze"/>
+    <text x="42" y="106.8" clip-path="url(#ln3)">                    ...:.....      .-+##*++++***+:</text>
+    <defs><clipPath id="ln4"><rect x="42" y="107.8" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="301.2" dur="0.52s" begin="0.29s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="120.0" clip-path="url(#ln4)">                +++*+=:                  :**</text>
-    <defs><clipPath id="ln5"><rect x="42" y="121.0" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="256.4" dur="0.44s" begin="0.33s" fill="freeze"/>
+    <text x="42" y="116.0" clip-path="url(#ln4)">                       . ....         .=%%########*:</text>
+    <defs><clipPath id="ln5"><rect x="42" y="117.0" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="306.8" dur="0.53s" begin="0.33s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="129.2" clip-path="url(#ln5)">                +**-.         .:-==+*##*: +%</text>
-    <defs><clipPath id="ln6"><rect x="42" y="130.2" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="256.4" dur="0.44s" begin="0.36s" fill="freeze"/>
+    <text x="42" y="125.2" clip-path="url(#ln5)">                :-===-:.  ...::..       -#%#########+</text>
+    <defs><clipPath id="ln6"><rect x="42" y="126.2" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="318.0" dur="0.55s" begin="0.36s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="138.4" clip-path="url(#ln6)">                *+         .=*%@@@@@@@@@@*:+</text>
-    <defs><clipPath id="ln7"><rect x="42" y="139.4" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="256.4" dur="0.44s" begin="0.40s" fill="freeze"/>
+    <text x="42" y="134.4" clip-path="url(#ln6)">              -*##%%%#+===+++**++=-:.    .*%######**#*.</text>
+    <defs><clipPath id="ln7"><rect x="42" y="135.4" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="323.6" dur="0.56s" begin="0.40s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="147.6" clip-path="url(#ln7)">                -        .+#@@%%%%%@@@%%%@%=</text>
-    <defs><clipPath id="ln8"><rect x="42" y="148.6" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="278.8" dur="0.48s" begin="0.43s" fill="freeze"/>
+    <text x="42" y="143.6" clip-path="url(#ln7)">             =%%%%%%%%########*****+=-.   .*########***:</text>
+    <defs><clipPath id="ln8"><rect x="42" y="144.6" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="329.2" dur="0.57s" begin="0.43s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="156.8" clip-path="url(#ln8)">             *#:         -+%%@@@@%%%%%%@%%#*==++</text>
-    <defs><clipPath id="ln9"><rect x="42" y="157.8" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="256.4" dur="0.44s" begin="0.47s" fill="freeze"/>
+    <text x="42" y="152.8" clip-path="url(#ln8)">            =%##%%%%%###########***+++=:   .#%####*****#:</text>
+    <defs><clipPath id="ln9"><rect x="42" y="153.8" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="334.8" dur="0.58s" begin="0.47s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="166.0" clip-path="url(#ln9)">             #+           :*%#+==*+.  .+#=--</text>
-    <defs><clipPath id="ln10"><rect x="42" y="167.0" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="256.4" dur="0.44s" begin="0.50s" fill="freeze"/>
+    <text x="42" y="162.0" clip-path="url(#ln9)">           -%###%%%%%###########****+++=:   :%#####**#***.</text>
+    <defs><clipPath id="ln10"><rect x="42" y="163.0" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="334.8" dur="0.58s" begin="0.50s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="175.2" clip-path="url(#ln10)">             #-          :=-::=+..      +%#:</text>
-    <defs><clipPath id="ln11"><rect x="42" y="176.2" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="267.6" dur="0.46s" begin="0.54s" fill="freeze"/>
+    <text x="42" y="171.2" clip-path="url(#ln10)">          .#####%%%%%%#%########****+++=-:.  +%######+==+=</text>
+    <defs><clipPath id="ln11"><rect x="42" y="172.2" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="340.4" dur="0.59s" begin="0.54s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="184.4" clip-path="url(#ln11)">             #=          .:=*%@@*      :%@@@#:</text>
-    <defs><clipPath id="ln12"><rect x="42" y="185.4" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="278.8" dur="0.48s" begin="0.57s" fill="freeze"/>
+    <text x="42" y="180.4" clip-path="url(#ln11)">          +%###%%%%%%%%%##########***++==-:. +%####*+==*#%-</text>
+    <defs><clipPath id="ln12"><rect x="42" y="181.4" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="340.4" dur="0.59s" begin="0.57s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="193.6" clip-path="url(#ln12)">             ##          .%@@@%%%*-:::+*++:.=**#</text>
-    <defs><clipPath id="ln13"><rect x="42" y="194.6" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="278.8" dur="0.48s" begin="0.61s" fill="freeze"/>
+    <text x="42" y="189.6" clip-path="url(#ln12)">          ++===+++*++#%%%##*++=======+++==:. +%#####*+++#@#</text>
+    <defs><clipPath id="ln13"><rect x="42" y="190.6" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="346.0" dur="0.60s" begin="0.61s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="202.8" clip-path="url(#ln13)">             *#+        ..*#*++=+*#%@@@#::--+*%@</text>
-    <defs><clipPath id="ln14"><rect x="42" y="203.8" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="301.2" dur="0.52s" begin="0.64s" fill="freeze"/>
+    <text x="42" y="198.8" clip-path="url(#ln13)">         .==--::::-.-+*++*=:::::::::::-==+=:.+*%#####**++#%.</text>
+    <defs><clipPath id="ln14"><rect x="42" y="199.8" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="346.0" dur="0.60s" begin="0.64s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="212.0" clip-path="url(#ln14)">          *##**%=  -:=- :::---=*##%@@%@@%#=++*++%%%%</text>
-    <defs><clipPath id="ln15"><rect x="42" y="213.0" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="301.2" dur="0.52s" begin="0.68s" fill="freeze"/>
+    <text x="42" y="208.0" clip-path="url(#ln14)">         =++++=-----=::::-.-=---=====+*=-=:--#+*%#######*=*-</text>
+    <defs><clipPath id="ln15"><rect x="42" y="209.0" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="346.0" dur="0.60s" begin="0.68s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="221.2" clip-path="url(#ln15)">          *##***%=-- .  :=....:+###%%@*=:-=---+*+*%%</text>
-    <defs><clipPath id="ln16"><rect x="42" y="222.2" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="301.2" dur="0.52s" begin="0.71s" fill="freeze"/>
+    <text x="42" y="217.2" clip-path="url(#ln15)">         ----=+---:-=:*#*.-=-:::::-=-:-----.:%%+#%###%#*+*#=</text>
+    <defs><clipPath id="ln16"><rect x="42" y="218.2" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="346.0" dur="0.60s" begin="0.71s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="230.4" clip-path="url(#ln16)">          *###*###+=:* ..=.    .:=++*#==%%%#++#@*:%%</text>
-    <defs><clipPath id="ln17"><rect x="42" y="231.4" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="301.2" dur="0.52s" begin="0.75s" fill="freeze"/>
+    <text x="42" y="226.4" clip-path="url(#ln16)">         :::::---:==-*%%%=-=---:::--:::-=---=%%#+##%#**#%%@=</text>
+    <defs><clipPath id="ln17"><rect x="42" y="227.4" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="346.0" dur="0.60s" begin="0.75s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="239.6" clip-path="url(#ln17)">          ##########--==-:.       ...-::==*%%@#*= %%</text>
-    <defs><clipPath id="ln18"><rect x="42" y="240.6" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="301.2" dur="0.52s" begin="0.78s" fill="freeze"/>
+    <text x="42" y="235.6" clip-path="url(#ln17)">         =*++=+==+*-=%%%%#-+*+==++=--==++-++++**-+#++#%%%#*:</text>
+    <defs><clipPath id="ln18"><rect x="42" y="236.6" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="346.0" dur="0.60s" begin="0.78s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="248.8" clip-path="url(#ln18)">          #*##+++++**. :=.-                ...    #%</text>
-    <defs><clipPath id="ln19"><rect x="42" y="249.8" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="301.2" dur="0.52s" begin="0.82s" fill="freeze"/>
+    <text x="42" y="244.8" clip-path="url(#ln18)">         =%######*-=##%%%#*-+*###******+=*++=:-==++==****+*.</text>
+    <defs><clipPath id="ln19"><rect x="42" y="245.8" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="340.4" dur="0.59s" begin="0.82s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="258.0" clip-path="url(#ln19)">          #*%=          . .                      =%%</text>
-    <defs><clipPath id="ln20"><rect x="42" y="259.0" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="323.6" dur="0.56s" begin="0.85s" fill="freeze"/>
+    <text x="42" y="254.0" clip-path="url(#ln19)">         .####++=-+##%%%%%*+-==*****++++**++=-######*+**##*</text>
+    <defs><clipPath id="ln20"><rect x="42" y="255.0" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="340.4" dur="0.59s" begin="0.85s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="267.2" clip-path="url(#ln20)">        ***##.                                 :#@%%%%%%</text>
-    <defs><clipPath id="ln21"><rect x="42" y="268.2" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="323.6" dur="0.56s" begin="0.89s" fill="freeze"/>
+    <text x="42" y="263.2" clip-path="url(#ln20)">          =+++***#%###%%%####***+++++**#**++=+%%%%%%%%###%=</text>
+    <defs><clipPath id="ln21"><rect x="42" y="264.2" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="346.0" dur="0.60s" begin="0.89s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="276.4" clip-path="url(#ln21)">        **##.                                   -%%%%%%%</text>
-    <defs><clipPath id="ln22"><rect x="42" y="277.4" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="323.6" dur="0.56s" begin="0.92s" fill="freeze"/>
+    <text x="42" y="272.4" clip-path="url(#ln21)">        .*%%%%%##*=-==+++=--=**#%%%%##****++=*%%%%%%%######=</text>
+    <defs><clipPath id="ln22"><rect x="42" y="273.4" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="357.2" dur="0.60s" begin="0.92s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="285.6" clip-path="url(#ln22)">        **%-                               =:    -@%%%%%</text>
-    <defs><clipPath id="ln23"><rect x="42" y="286.6" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="323.6" dur="0.56s" begin="0.96s" fill="freeze"/>
+    <text x="42" y="281.6" clip-path="url(#ln22)">       -%%%%%###%#==========+***######***+++=#%%%%%%%######%*:</text>
+    <defs><clipPath id="ln23"><rect x="42" y="282.6" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="362.8" dur="0.60s" begin="0.96s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="294.8" clip-path="url(#ln23)">        **#                  ..           =#.     *%%%%%</text>
-    <defs><clipPath id="ln24"><rect x="42" y="295.8" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="323.6" dur="0.56s" begin="0.99s" fill="freeze"/>
+    <text x="42" y="290.8" clip-path="url(#ln23)">      +%##%##%%%%%#+==++=++*#####*###****+*+=%%%%%%%#########%-</text>
+    <defs><clipPath id="ln24"><rect x="42" y="291.8" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="368.4" dur="0.60s" begin="0.99s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="304.0" clip-path="url(#ln24)">        *#*                     .        .*-      =@%%%%</text>
-    <defs><clipPath id="ln25"><rect x="42" y="305.0" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="323.6" dur="0.56s" begin="1.03s" fill="freeze"/>
+    <text x="42" y="300.0" clip-path="url(#ln24)">     +#######*+++*+=++**+=-=++==+*******+++=-%%%%%%%%%%#######%=</text>
+    <defs><clipPath id="ln25"><rect x="42" y="301.0" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="374.0" dur="0.60s" begin="1.03s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="313.2" clip-path="url(#ln25)">        *#-                              .. .     .@@@%%</text>
-    <defs><clipPath id="ln26"><rect x="42" y="314.2" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="368.4" dur="0.60s" begin="1.06s" fill="freeze"/>
+    <text x="42" y="309.2" clip-path="url(#ln25)">    =***#***=::====-==++==-====..-+**+++++=:-%%%%%%%%%%########%+</text>
+    <defs><clipPath id="ln26"><rect x="42" y="310.2" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="379.6" dur="0.60s" begin="1.06s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="322.4" clip-path="url(#ln26)">    ****%=                                 .:      .-+#@@@%%%%%%</text>
-    <defs><clipPath id="ln27"><rect x="42" y="323.4" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="368.4" dur="0.60s" begin="1.09s" fill="freeze"/>
+    <text x="42" y="318.4" clip-path="url(#ln26)">   :==++##*-:-=+=++****++++=----.:-+*++==-=.=%%%%%%%##%##%######%=</text>
+    <defs><clipPath id="ln27"><rect x="42" y="319.4" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="385.2" dur="0.60s" begin="1.09s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="331.6" clip-path="url(#ln27)">    +*#*-                                 ..           :=#@@%%%%</text>
-    <defs><clipPath id="ln28"><rect x="42" y="332.6" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="368.4" dur="0.60s" begin="1.13s" fill="freeze"/>
+    <text x="42" y="327.6" clip-path="url(#ln27)">  -----=*#+-#%%%%####********#***=-**=-=-=: +%%%%%%%#####%#######%:</text>
+    <defs><clipPath id="ln28"><rect x="42" y="328.6" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="385.2" dur="0.60s" begin="1.13s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="340.8" clip-path="url(#ln28)">    *+:                                                   :*@%%%</text>
-    <defs><clipPath id="ln29"><rect x="42" y="341.8" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="368.4" dur="0.60s" begin="1.17s" fill="freeze"/>
+    <text x="42" y="336.8" clip-path="url(#ln28)"> :%::-:-=+=+#%%%##***+++++**#####*=++-:--:..#%%%%%%%%%%###########*</text>
+    <defs><clipPath id="ln29"><rect x="42" y="337.8" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="390.8" dur="0.60s" begin="1.17s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="350.0" clip-path="url(#ln29)">    -                                                       :%%%</text>
-    <defs><clipPath id="ln30"><rect x="42" y="351.0" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="368.4" dur="0.60s" begin="1.20s" fill="freeze"/>
+    <text x="42" y="346.0" clip-path="url(#ln29)"> *%- ...:::-=+*%%%%%#***%##%####+=--=-.:.. -%%%%%%%%%%%%##########%-</text>
+    <defs><clipPath id="ln30"><rect x="42" y="347.0" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="390.8" dur="0.60s" begin="1.20s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="359.2" clip-path="url(#ln30)">                                                              #%</text>
-    <defs><clipPath id="ln31"><rect x="42" y="360.2" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="368.4" dur="0.60s" begin="1.24s" fill="freeze"/>
+    <text x="42" y="355.2" clip-path="url(#ln30)">.%%#.     ..:-=+*##*##+**#%#*+=-:.:.:.... :%%%%%%%%%%%%%%%#########*</text>
+    <defs><clipPath id="ln31"><rect x="42" y="356.2" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="396.4" dur="0.60s" begin="1.24s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="368.4" clip-path="url(#ln31)">                                                               #</text>
-    <defs><clipPath id="ln32"><rect x="42" y="369.4" width="0" height="10.2">
-      <animate attributeName="width" from="0" to="368.4" dur="0.60s" begin="1.27s" fill="freeze"/>
+    <text x="42" y="364.4" clip-path="url(#ln31)">=%%%*.       .--:=++**+++====-:..         -%%%%%%#%@%%%%%%%%%#######.</text>
+    <defs><clipPath id="ln32"><rect x="42" y="365.4" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="396.4" dur="0.60s" begin="1.27s" fill="freeze"/>
     </rect></clipPath></defs>
-    <text x="42" y="377.6" clip-path="url(#ln32)">                                                               .</text>
+    <text x="42" y="373.6" clip-path="url(#ln32)">*%%%%+        ..:.-=---==-:....         := -==+**+--=+*#####*##%%##%-</text>
+    <defs><clipPath id="ln33"><rect x="42" y="374.6" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="396.4" dur="0.60s" begin="1.30s" fill="freeze"/>
+    </rect></clipPath></defs>
+    <text x="42" y="382.8" clip-path="url(#ln33)">#%%%%%#-        ...:..:::..           .-*+    :+*%#-    .-=*##+=*%%%=</text>
+    <defs><clipPath id="ln34"><rect x="42" y="383.8" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="396.4" dur="0.60s" begin="1.34s" fill="freeze"/>
+    </rect></clipPath></defs>
+    <text x="42" y="392.0" clip-path="url(#ln34)">#%#*++++=:                          .-*#*-    .+*%%%#*++**#%%%%=.:+#=</text>
+    <defs><clipPath id="ln35"><rect x="42" y="393.0" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="396.4" dur="0.60s" begin="1.38s" fill="freeze"/>
+    </rect></clipPath></defs>
+    <text x="42" y="401.2" clip-path="url(#ln35)">#%##+ -%#-:                       .-*#***.    :+*#%###*##*#%%%%%#**#=</text>
+    <defs><clipPath id="ln36"><rect x="42" y="402.2" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="396.4" dur="0.60s" begin="1.41s" fill="freeze"/>
+    </rect></clipPath></defs>
+    <text x="42" y="410.4" clip-path="url(#ln36)">+##%%%%+  *=:                   :=*##*##:     ++*#%%##*#####%%%%%%%@-</text>
+    <defs><clipPath id="ln37"><rect x="42" y="411.4" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="396.4" dur="0.60s" begin="1.45s" fill="freeze"/>
+    </rect></clipPath></defs>
+    <text x="42" y="419.6" clip-path="url(#ln37)">=%%%%%+   +**+-:..          .:=+*##**#*:     -**#%%%%######%%%%%%%%%:</text>
+    <defs><clipPath id="ln38"><rect x="42" y="420.6" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="390.8" dur="0.60s" begin="1.48s" fill="freeze"/>
+    </rect></clipPath></defs>
+    <text x="42" y="428.8" clip-path="url(#ln38)">:%%%%%-   =+**#**+==------=++*****###+.     ...:-=#%#*#%#+---=+#%%%#</text>
+    <defs><clipPath id="ln39"><rect x="42" y="429.8" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="390.8" dur="0.60s" begin="1.52s" fill="freeze"/>
+    </rect></clipPath></defs>
+    <text x="42" y="438.0" clip-path="url(#ln39)"> *@%#-    =++*******************##*+-             .-*#%%:      .-*%-</text>
+    <defs><clipPath id="ln40"><rect x="42" y="439.0" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="385.2" dur="0.60s" begin="1.55s" fill="freeze"/>
+    </rect></clipPath></defs>
+    <text x="42" y="447.2" clip-path="url(#ln40)"> .-:.     =++***#####*********##*+-.                :=+-          .</text>
+    <defs><clipPath id="ln41"><rect x="42" y="448.2" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="194.8" dur="0.33s" begin="1.58s" fill="freeze"/>
+    </rect></clipPath></defs>
+    <text x="42" y="456.4" clip-path="url(#ln41)">          =*++**###########**+=-.</text>
+    <defs><clipPath id="ln42"><rect x="42" y="457.4" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="172.4" dur="0.29s" begin="1.62s" fill="freeze"/>
+    </rect></clipPath></defs>
+    <text x="42" y="465.6" clip-path="url(#ln42)">          .-=+++***##**+=--:.</text>
+    <defs><clipPath id="ln43"><rect x="42" y="466.6" width="0" height="10.2">
+      <animate attributeName="width" from="0" to="133.2" dur="0.22s" begin="1.66s" fill="freeze"/>
+    </rect></clipPath></defs>
+    <text x="42" y="474.8" clip-path="url(#ln43)">              ........</text>
   </g>
   <!-- Profile Information -->
   <g class="mono">
