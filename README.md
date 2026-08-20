@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/profile-hero.svg" width="100%" alt="Ahmad Khalil terminal profile" />
+  <img src="./assets/profile-hero.svg?v=fullstack" width="100%" alt="Ahmad Khalil terminal profile" />
 </p>
 
 <p align="center">
