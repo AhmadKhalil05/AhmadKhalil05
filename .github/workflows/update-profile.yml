@@ -7,7 +7,6 @@ on:
     paths:
       - 'scripts/**'
       - 'profile-config.json'
-      - 'source/**'
       - '.github/workflows/**'
   schedule:
     - cron: '0 0 * * *'
