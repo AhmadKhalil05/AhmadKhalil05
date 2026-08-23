@@ -1,8 +1,8 @@
 {
   "username": "AhmadKhalil05",
-  "updated_at": "2026-08-22T01:37:04+00:00",
+  "updated_at": "2026-08-23T01:47:05+00:00",
   "total": 565,
-  "current_streak": 2,
+  "current_streak": 0,
   "longest_streak": 8,
   "best_day": {
     "date": "2026-07-27",
@@ -10,41 +10,6 @@
     "level": 4
   },
   "days": [
-    {
-      "date": "2025-08-17",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-08-18",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-08-19",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-08-20",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-08-21",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-08-22",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-08-23",
-      "count": 0,
-      "level": 0
-    },
     {
       "date": "2025-08-24",
       "count": 0,
@@ -1862,6 +1827,11 @@
     },
     {
       "date": "2026-08-22",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-08-23",
       "count": 0,
       "level": 0
     }
